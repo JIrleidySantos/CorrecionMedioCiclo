@@ -8,20 +8,20 @@ package ec.edu.espoch.correcionmediociclo.modelo;
  *
  * @author mundo
  */
-public class Tarea {
+public class Productos {
      private int id;
     private String titulo;
     private String descripcion;
     private boolean estado;
 
-    public Tarea(int id, String titulo, String descripcion, boolean estado) {
+    public Productos(int id, String titulo, String descripcion, boolean estado) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.estado = estado;
     }
 
-    public Tarea() {
+    public Productos() {
     }
 
     public int getId() {

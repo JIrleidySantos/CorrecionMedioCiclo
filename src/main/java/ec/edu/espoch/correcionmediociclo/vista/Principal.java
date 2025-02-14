@@ -213,7 +213,6 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        setDefaultCloseOperation(Principal.EXIT_ON_CLOSE);
     }//GEN-LAST:event_jMenu2ActionPerformed
 
      public String getTitulo(){

@@ -8,19 +8,19 @@ package ec.edu.espoch.correcionmediociclo.modelo;
  *
  * @author mundo
  */
-public class GestorTarea {
+public class GestorProductos {
     
     int tamanoVector = 5;
-    Tarea[] tareas = new Tarea[tamanoVector];
+    Productos[] tareas = new Productos[tamanoVector];
     int cont = 0;
 
-    public String agregarTarea(Tarea tarea) {
+    public String agregarTarea(Productos tarea) {
         String msg = "Ingreso exitoso";
         if (tareas.length != cont) {
             for (int i = 0; i < tareas.length; i++) {
                 if (tareas[i] == null) {
                     //inicializar el objeto
-                    tareas[i] = new Tarea();
+                    tareas[i] = new Productos();
                     tareas[i].setId(i);
                     tareas[i].setTitulo(tarea.getTitulo());
                     tareas[i].setDescripcion(tarea.getDescripcion());
@@ -34,13 +34,13 @@ public class GestorTarea {
         }
         return msg;
     }
-        public Tarea[] listarTareas() {
+        public Productos[] listarTareas() {
 
-        Tarea[] auxTareas = new Tarea[tamanoVector];
+        Productos[] auxTareas = new Productos[tamanoVector];
         for (int i = 0; i < cont; i++) {
 
             //if (tareas[i].getEstado()) {
-            auxTareas[i] = new Tarea();
+            auxTareas[i] = new Productos();
             auxTareas[i].setId(tareas[i].getId());
             auxTareas[i].setTitulo(tareas[i].getTitulo());
             auxTareas[i].setDescripcion(tareas[i].getDescripcion());

@@ -12,6 +12,7 @@ import ec.edu.espoch.correcionmediociclo.controlador.Controlador;
  */
 public class ListarIU extends javax.swing.JFrame {
    private Controlador controlador;
+   
     
     /**
      * Creates new form ListarTareas
@@ -33,7 +34,10 @@ public class ListarIU extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         textAreaListarTareas = new javax.swing.JTextArea();
-        bntCerrar = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        menuVolver = new javax.swing.JMenuItem();
+        menuCerrar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,30 +48,45 @@ public class ListarIU extends javax.swing.JFrame {
         textAreaListarTareas.setRows(5);
         jScrollPane1.setViewportView(textAreaListarTareas);
 
-        bntCerrar.setText("CERRAR");
-        bntCerrar.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("Menu");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bntCerrarActionPerformed(evt);
+                jMenu1ActionPerformed(evt);
             }
         });
+
+        menuVolver.setText("Volver");
+        menuVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuVolverActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuVolver);
+
+        menuCerrar.setText("Cerrar");
+        menuCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCerrarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuCerrar);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(57, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(bntCerrar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,18 +95,27 @@ public class ListarIU extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(bntCerrar)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bntCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCerrarActionPerformed
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_bntCerrarActionPerformed
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void menuVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuVolverActionPerformed
+        // TODO add your handling code here
+        Principal principal= new Principal();
+        principal.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_menuVolverActionPerformed
+
+    private void menuCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCerrarActionPerformed
+        // TODO add your handling code here:
+        System.exit(WIDTH);
+    }//GEN-LAST:event_menuCerrarActionPerformed
 
     public void mostrarDatos(String msm){
     textAreaListarTareas.setText(msm);
@@ -97,9 +125,12 @@ public class ListarIU extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bntCerrar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuItem menuCerrar;
+    private javax.swing.JMenuItem menuVolver;
     private javax.swing.JTextArea textAreaListarTareas;
     // End of variables declaration//GEN-END:variables
 }

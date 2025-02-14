@@ -4,8 +4,8 @@
  */
 package ec.edu.espoch.correcionmediociclo.controlador;
 
-import ec.edu.espoch.correcionmediociclo.modelo.GestorTarea;
-import ec.edu.espoch.correcionmediociclo.modelo.Tarea;
+import ec.edu.espoch.correcionmediociclo.modelo.GestorProductos;
+import ec.edu.espoch.correcionmediociclo.modelo.Productos;
 import ec.edu.espoch.correcionmediociclo.vista.ListarIU;
 import ec.edu.espoch.correcionmediociclo.vista.Principal;
 
@@ -15,21 +15,21 @@ import ec.edu.espoch.correcionmediociclo.vista.Principal;
  */
 public class Controlador {
     private Principal principal;
-    private GestorTarea gestorTarea;
+    private GestorProductos gestorTarea;
     private ListarIU listarIU;
     
     public Controlador(Principal principal, ListarIU listarIU) {
         this.principal = principal;
         this.listarIU= listarIU;
         //Cambia el constructor de la clase modelo
-        this.gestorTarea = new GestorTarea();
+        this.gestorTarea = new GestorProductos();
     }
     
     public void agregarTarea() {
 
         try {
             if (this.principal != null) {
-                Tarea objTarea = new Tarea();
+                Productos objTarea = new Productos();
                 objTarea.setTitulo(this.principal.getTitulo());
                 objTarea.setDescripcion(this.principal.getDescripcion());
                 objTarea.setEstado(this.principal.getEstado());
@@ -48,7 +48,7 @@ public class Controlador {
 
         try {
             String msm = "";
-            Tarea[] tareas = new Tarea[5];
+            Productos[] tareas = new Productos[5];
             tareas = gestorTarea.listarTareas();
             if (tareas != null) {
                 String lista = "";
