@@ -6,19 +6,19 @@ package ec.edu.espoch.correcionmediociclo.controlador;
 
 import ec.edu.espoch.correcionmediociclo.modelo.GestorProductos;
 import ec.edu.espoch.correcionmediociclo.modelo.Productos;
-import ec.edu.espoch.correcionmediociclo.vista.ListarIU;
-import ec.edu.espoch.correcionmediociclo.vista.Principal;
+import ec.edu.espoch.correcionmediociclo.vista.ListarProductos;
+import ec.edu.espoch.correcionmediociclo.vista.Vista;
 
 /**
  *
  * @author mundo
  */
 public class Controlador {
-    private Principal principal;
+    private Vista principal;
     private GestorProductos gestorTarea;
-    private ListarIU listarIU;
+    private ListarProductos listarIU;
     
-    public Controlador(Principal principal, ListarIU listarIU) {
+    public Controlador(Vista principal, ListarProductos listarIU) {
         this.principal = principal;
         this.listarIU= listarIU;
         //Cambia el constructor de la clase modelo

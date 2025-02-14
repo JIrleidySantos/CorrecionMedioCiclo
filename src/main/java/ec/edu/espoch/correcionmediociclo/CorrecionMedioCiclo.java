@@ -4,7 +4,7 @@
 
 package ec.edu.espoch.correcionmediociclo;
 
-import ec.edu.espoch.correcionmediociclo.vista.Principal;
+import ec.edu.espoch.correcionmediociclo.vista.Vista;
 
 /**
  *
@@ -13,7 +13,7 @@ import ec.edu.espoch.correcionmediociclo.vista.Principal;
 public class CorrecionMedioCiclo {
 
     public static void main(String[] args) {
-        Principal objvista  = new Principal();
+        Vista objvista  = new Vista();
         objvista.setVisible(true);
     }
 }

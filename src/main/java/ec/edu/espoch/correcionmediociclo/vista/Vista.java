@@ -10,15 +10,15 @@ import ec.edu.espoch.correcionmediociclo.controlador.Controlador;
  *
  * @author mundo
  */
-public class Principal extends javax.swing.JFrame {
+public class Vista extends javax.swing.JFrame {
     private Controlador controlador;
-    private ListarIU listarIU;
+    private ListarProductos listarIU;
     /**
      * Creates new form Vista
      */
-    public Principal() {
+    public Vista() {
         initComponents();
-        this.listarIU= new ListarIU();
+        this.listarIU= new ListarProductos();
         this.controlador = new Controlador(this, listarIU);
     }
 

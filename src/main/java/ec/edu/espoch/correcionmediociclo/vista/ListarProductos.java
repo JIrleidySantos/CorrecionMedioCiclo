@@ -10,14 +10,14 @@ import ec.edu.espoch.correcionmediociclo.controlador.Controlador;
  *
  * @author mundo
  */
-public class ListarIU extends javax.swing.JFrame {
+public class ListarProductos extends javax.swing.JFrame {
    private Controlador controlador;
    
     
     /**
      * Creates new form ListarTareas
      */
-    public ListarIU() {
+    public ListarProductos() {
         initComponents();
     }
 
@@ -108,7 +108,7 @@ public class ListarIU extends javax.swing.JFrame {
 
     private void menuVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuVolverActionPerformed
         // TODO add your handling code here
-        Principal principal= new Principal();
+        Vista principal= new Vista();
         principal.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_menuVolverActionPerformed
 

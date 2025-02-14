@@ -4,21 +4,21 @@
  */
 package ec.edu.espoch.correcionmediociclo.tester;
 
-import ec.edu.espoch.correcionmediociclo.vista.Principal;
+import ec.edu.espoch.correcionmediociclo.vista.Vista;
 
 /**
  *
  * @author mundo
  */
 public class TesterVista {
-    private Principal principal;
+    private Vista principal;
 
-    public TesterVista(Principal principal) {
+    public TesterVista(Vista principal) {
         this.principal = principal;
     }
 
     public void prueba() {
-        //Principal principal=new Principal();
+        //Principal principal=new Vista();
         try {
             System.out.println("Titulo: " + principal.getTitulo());
             System.out.println("Descripcion: " + principal.getDescripcion());
