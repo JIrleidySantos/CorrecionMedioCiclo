@@ -4,10 +4,17 @@
  */
 package ec.edu.espoch.correcionmediociclo.tester;
 
+import ec.edu.espoch.correcionmediociclo.modelo.Tarea;
+
 /**
  *
  * @author mundo
  */
 public class TesterControlador {
-    
+        public void prueba(Tarea objTarea) {
+        System.out.println("Titulo: " + objTarea.getTitulo());
+        System.out.println("Descripcion: " + objTarea.getDescripcion());
+        System.out.println("Estado: " + objTarea.getEstado());
+    }
+
 }

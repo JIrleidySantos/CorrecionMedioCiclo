@@ -4,13 +4,16 @@
 
 package ec.edu.espoch.correcionmediociclo;
 
+import ec.edu.espoch.correcionmediociclo.vista.Principal;
+
 /**
  *
  * @author mundo
  */
-public class GestorProductos {
+public class CorrecionMedioCiclo {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Principal objvista  = new Principal();
+        objvista.setVisible(true);
     }
 }
