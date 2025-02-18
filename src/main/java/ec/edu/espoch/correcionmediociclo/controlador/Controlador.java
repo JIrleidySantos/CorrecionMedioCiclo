@@ -8,6 +8,7 @@ import ec.edu.espoch.correcionmediociclo.modelo.GestorProductos;
 import ec.edu.espoch.correcionmediociclo.modelo.Productos;
 import ec.edu.espoch.correcionmediociclo.vista.ListarProductos;
 import ec.edu.espoch.correcionmediociclo.vista.Vista;
+import java.awt.Frame;
 
 /**
  *
@@ -57,7 +58,7 @@ public class Controlador {
                         lista = lista + "id:" + tareas[i].getId() + "\n"
                                 + "Titulo:" + tareas[i].getTitulo() + "\n"
                                 + "Descripcion:" + tareas[i].getDescripcion() + "\n"
-                                + "Estado:" + tareas[i].getEstado() + "\n";
+                                + "Estado:" + tareas[i].getEstado()+ "\n";
                     }
                 }
                 msm = lista;
@@ -70,6 +71,6 @@ public class Controlador {
             System.out.println("Error Controlador-listarTarea: " + e);
         }
     }
-              
+      
 }
 

@@ -39,16 +39,13 @@ public class GestorProductos {
         Productos[] auxTareas = new Productos[tamanoVector];
         for (int i = 0; i < cont; i++) {
 
-            //if (tareas[i].getEstado()) {
             auxTareas[i] = new Productos();
             auxTareas[i].setId(tareas[i].getId());
             auxTareas[i].setTitulo(tareas[i].getTitulo());
             auxTareas[i].setDescripcion(tareas[i].getDescripcion());
             auxTareas[i].setEstado(tareas[i].getEstado());
             System.out.println("Modelo-listarTarea" + auxTareas[i].getEstado());
-            // }
         }
         return auxTareas;
     }
-
 }

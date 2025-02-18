@@ -109,7 +109,8 @@ public class ListarProductos extends javax.swing.JFrame {
     private void menuVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuVolverActionPerformed
         // TODO add your handling code here
         Vista principal= new Vista();
-        principal.setVisible(rootPaneCheckingEnabled);
+        principal.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menuVolverActionPerformed
 
     private void menuCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCerrarActionPerformed

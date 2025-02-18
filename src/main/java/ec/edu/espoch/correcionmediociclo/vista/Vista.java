@@ -6,6 +6,7 @@ package ec.edu.espoch.correcionmediociclo.vista;
 
 import ec.edu.espoch.correcionmediociclo.controlador.Controlador;
 
+
 /**
  *
  * @author mundo
@@ -13,6 +14,7 @@ import ec.edu.espoch.correcionmediociclo.controlador.Controlador;
 public class Vista extends javax.swing.JFrame {
     private Controlador controlador;
     private ListarProductos listarIU;
+    
     /**
      * Creates new form Vista
      */
@@ -39,13 +41,13 @@ public class Vista extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lblNombre = new javax.swing.JLabel();
         lblPrecio = new javax.swing.JLabel();
-        textAreaDescripcion = new javax.swing.JTextField();
-        textTituloTarea = new javax.swing.JTextField();
+        txtAreaDescripcion = new javax.swing.JTextField();
+        txtTituloTarea = new javax.swing.JTextField();
         rbtDisponible = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         menuListar = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        menuSalir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,15 +77,15 @@ public class Vista extends javax.swing.JFrame {
 
         lblPrecio.setText("Precio del Producto: ");
 
-        textAreaDescripcion.addActionListener(new java.awt.event.ActionListener() {
+        txtAreaDescripcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textAreaDescripcionActionPerformed(evt);
+                txtAreaDescripcionActionPerformed(evt);
             }
         });
 
-        textTituloTarea.addActionListener(new java.awt.event.ActionListener() {
+        txtTituloTarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textTituloTareaActionPerformed(evt);
+                txtTituloTareaActionPerformed(evt);
             }
         });
 
@@ -96,6 +98,11 @@ public class Vista extends javax.swing.JFrame {
         });
 
         jMenu1.setText("Menu");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         menuListar.setText("Listar Tareas");
         menuListar.addActionListener(new java.awt.event.ActionListener() {
@@ -105,15 +112,15 @@ public class Vista extends javax.swing.JFrame {
         });
         jMenu1.add(menuListar);
 
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Salir");
-        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+        menuSalir.setText("Salir");
+        menuSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu2ActionPerformed(evt);
+                menuSalirActionPerformed(evt);
             }
         });
-        jMenuBar1.add(jMenu2);
+        jMenu1.add(menuSalir);
+
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
@@ -126,13 +133,13 @@ public class Vista extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(textTituloTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTituloTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblNombre)
                                     .addComponent(lblPrecio))
                                 .addGap(25, 25, 25)
-                                .addComponent(textAreaDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtAreaDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(80, 80, 80)
                         .addComponent(jLabel1))
@@ -161,11 +168,11 @@ public class Vista extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNombre)
-                    .addComponent(textTituloTarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTituloTarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPrecio)
-                    .addComponent(textAreaDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAreaDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbtDisponible)
@@ -187,13 +194,14 @@ public class Vista extends javax.swing.JFrame {
         this.controlador.agregarTarea();
     }//GEN-LAST:event_btnAgregarActionPerformed
 
-    private void textAreaDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textAreaDescripcionActionPerformed
+    private void txtAreaDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAreaDescripcionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textAreaDescripcionActionPerformed
+    }//GEN-LAST:event_txtAreaDescripcionActionPerformed
 
-    private void textTituloTareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textTituloTareaActionPerformed
+    private void txtTituloTareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloTareaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textTituloTareaActionPerformed
+
+    }//GEN-LAST:event_txtTituloTareaActionPerformed
 
     private void rbtDisponibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtDisponibleActionPerformed
         // TODO add your handling code here:
@@ -203,6 +211,7 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
         listarIU.setVisible(true);
         controlador.listarTarea(); 
+        this.setVisible(false);
     }//GEN-LAST:event_menuListarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -211,16 +220,21 @@ public class Vista extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEliminarActionPerformed
 
-    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu2ActionPerformed
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void menuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(WIDTH);
+    }//GEN-LAST:event_menuSalirActionPerformed
 
      public String getTitulo(){
-        return textTituloTarea.getText();
+        return txtTituloTarea.getText();
     }
     
     public String getDescripcion(){
-        return textAreaDescripcion.getText();
+        return txtAreaDescripcion.getText();
     }
     
     public boolean getEstado(){
@@ -233,9 +247,11 @@ public class Vista extends javax.swing.JFrame {
     
     public void limpiar(){
     
-    textTituloTarea.setText("");
-    textAreaDescripcion.setText("");
+    txtTituloTarea.setText("");
+    txtAreaDescripcion.setText("");
     }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -246,15 +262,15 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel lblError;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblPrecio;
     private javax.swing.JMenuItem menuListar;
+    private javax.swing.JMenuItem menuSalir;
     private javax.swing.JRadioButton rbtAgotado;
     private javax.swing.JRadioButton rbtDisponible;
-    private javax.swing.JTextField textAreaDescripcion;
-    private javax.swing.JTextField textTituloTarea;
+    private javax.swing.JTextField txtAreaDescripcion;
+    private javax.swing.JTextField txtTituloTarea;
     // End of variables declaration//GEN-END:variables
 }
